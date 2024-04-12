@@ -97,7 +97,6 @@ let textEmail = document.getElementById('email');
         let password = textPassword.value;
         console.log(email, password);
         let submitButton = document.querySelector('.btn-submit');
-        submitButton.textContent = 'Loading...';
         if(email === ""){
             alert("Email tidak boleh kosong");
             submitButton.textContent = 'Sign In';
@@ -106,8 +105,10 @@ let textEmail = document.getElementById('email');
             submitButton.textContent = 'Sign In';
         }else{
             if(email === "222310008@student.ibik.ac.id" && password === "222310008"){
+                submitButton.textContent = "Loading...";
+                setTimeout(() => {
                 alert(`Welcome, ${email}`);
-                submitButton.textContent = 'Success Sign In';
+                submitButton.textContent = 'Success Sign In';}, 1500);
             }else{
                 alert("Username atau password salah");
                 submitButton.textContent = 'Sign In';
