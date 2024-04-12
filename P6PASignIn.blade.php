@@ -107,7 +107,7 @@ let textEmail = document.getElementById('email');
             if(email === "222310008@student.ibik.ac.id" && password === "222310008"){
                 submitButton.textContent = "Loading...";
                 setTimeout(() => {
-                alert(`Welcome, ${email}`);
+                alert(`Welcome, Email: ${email}, Password: ${password}`);
                 submitButton.textContent = 'Success Sign In';}, 1500);
             }else{
                 alert("Username atau password salah");
